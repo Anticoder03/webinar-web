@@ -23,7 +23,9 @@ include_once 'include/_Nav.php';
 
   <!-- Content -->
   <div class="relative z-10 max-w-7xl mx-auto w-full px-6 py-10 grid md:grid-cols-2 gap-10">
-    
+
+
+
     <!-- Left Content -->
     <div class="text-white flex flex-col justify-center">
       <span class="uppercase text-sm tracking-widest font-semibold bg-white/20 w-max px-3 py-1 rounded">
