@@ -13,11 +13,11 @@
     <div>
       <h3 class="text-white font-semibold mb-4">Quick Links</h3>
       <ul class="space-y-2">
-        <li><a href="#" class="hover:text-green-500 transition">Home</a></li>
-        <li><a href="#" class="hover:text-green-500 transition">Courses</a></li>
-        <li><a href="#" class="hover:text-green-500 transition">About</a></li>
+        <li><a href="./index.php" class="hover:text-green-500 transition">Home</a></li>
+        <li><a href="./course.php" class="hover:text-green-500 transition">Courses</a></li>
+        <li><a href="./about.php" class="hover:text-green-500 transition">About</a></li>
         <li><a href="#" class="hover:text-green-500 transition">Gallery</a></li>
-        <li><a href="#" class="hover:text-green-500 transition">Contact</a></li>
+        <li><a href="./contact.php" class="hover:text-green-500 transition">Contact</a></li>
       </ul>
     </div>
 
@@ -27,10 +27,10 @@
       <p class="mb-2"><i class="fa-solid fa-phone me-2"></i> +91 XXXXX-XXXXX</p>
       <p class="mb-2"><i class="fa-solid fa-envelope me-2"></i> info@institute.com</p>
       <div class="flex space-x-4 mt-4">
-        <a href="#" class="text-gray-400 hover:text-green-500 transition"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" class="text-gray-400 hover:text-green-500 transition"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="text-gray-400 hover:text-green-500 transition"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#" class="text-gray-400 hover:text-green-500 transition"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="text-gray-400 hover:text-blue-500 transition"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="text-gray-400 hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="text-gray-400 hover:text-blue-900 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="text-gray-400 hover:text-blue-300 transition"><i class="fa-brands fa-twitter"></i></a>
       </div>
     </div>
 
