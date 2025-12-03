@@ -121,6 +121,7 @@
         iconOpen.classList.add('hidden');
         iconClose.classList.remove('hidden');
         // allow tabbing into menu links when open
+        console.log("Hello");
         menu.querySelectorAll('a, button').forEach(el => el.tabIndex = 0);
       }
 
