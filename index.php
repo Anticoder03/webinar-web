@@ -308,7 +308,7 @@ include_once 'include/_Nav.php';
             <span class="text-sm text-gray-500">(0 rating)</span>
           </div>
           <div class="mt-4 flex justify-between items-center">
-            <span class="text-gray-600 text-sm">45 Students</span>
+            <span class="text-gray-600 text-sm">40 Students</span>
             <span class="text-red-500 font-bold">Free</span>
           </div>
         </div>
