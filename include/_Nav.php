@@ -80,7 +80,7 @@
         </div>
 
         <div class="pt-2 border-t">
-          <a href="./join.php"
+          <a href="#"
              class="block w-full text-center px-4 py-2 rounded-md bg-emerald-500 text-white font-medium hover:opacity-95">
             Join Now
           </a>
