@@ -321,6 +321,170 @@ include_once 'include/_Nav.php';
 
 
 
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-left mb-10">
+      <h2 class="text-4xl font-bold text-gray-800 border-l-4 border-emerald-500 pl-4">
+        Why Choose Us?
+      </h2>
+    </div>
+
+    <!-- Content -->
+    <div class="grid md:grid-cols-3 gap-10 text-center">
+
+      <!-- Box 1 -->
+      <div class="p-8 bg-gray-50 rounded-xl shadow hover:shadow-lg transition-all">
+        <i class="fas fa-check-circle text-4xl text-emerald-600 mb-4"></i>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Trusted Courses</h3>
+        <p class="text-gray-600">
+          Our programs are designed with industry experts to ensure high-quality learning.
+        </p>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="p-8 bg-gray-50 rounded-xl shadow hover:shadow-lg transition-all">
+        <i class="fas fa-users text-4xl text-emerald-600 mb-4"></i>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Expert Instructors</h3>
+        <p class="text-gray-600">
+          Learn from experienced professionals who know what the real world demands.
+        </p>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="p-8 bg-gray-50 rounded-xl shadow hover:shadow-lg transition-all">
+        <i class="fas fa-graduation-cap text-4xl text-emerald-600 mb-4"></i>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Career Focused</h3>
+        <p class="text-gray-600">
+          We not only teach, we guide you towards real job-ready skills and opportunities.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<style>
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+/* sliding overlay */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s ease-in-out;
+  z-index: 0;
+}
+
+/* keep text above */
+.card * {
+  position: relative;
+  z-index: 1;
+}
+
+/* hover effect trigger */
+.card:hover::before {
+  top: 0;
+}
+
+/* on hover: text + icon turns white */
+.card:hover .icon,
+.card:hover .title,
+.card:hover .desc {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+/* Unique hover colors */
+.card-1::before { background: #ef4444; } /* Red */
+.card-2::before { background: #10b981; } /* Green */
+.card-3::before { background: #f59e0b; } /* Yellow */
+</style>
+
+
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    
+    <p class="text-emerald-600 font-semibold mb-2 tracking-wide uppercase">
+      GET INDUSTRY READY
+    </p>
+
+    <h2 class="text-4xl font-bold text-gray-800 mb-3">
+      What We Offer For Growth
+    </h2>
+
+    <p class="text-gray-600 mb-12">
+      We connect you with the right opportunities for a better future.
+    </p>
+
+
+    <!-- Card Grid -->
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- Card 1 -->
+      <div class="card card-1 p-10 bg-white rounded-xl shadow-xl cursor-pointer">
+
+        <div class="mb-6 flex justify-center">
+          <div class="icon border-2 border-red-500 text-red-500 rounded-full w-20 h-20 flex items-center justify-center text-4xl transition-all">
+            <i class="fas fa-users"></i>
+          </div>
+        </div>
+
+        <h3 class="title text-2xl font-semibold text-gray-800 mb-3 transition-all">Employer</h3>
+        <p class="desc text-gray-600 transition-all">
+          Hire candidates with industry-ready skills and relevant work experience.
+        </p>
+
+      </div>
+
+
+      <!-- Card 2 -->
+      <div class="card card-2 p-10 bg-white rounded-xl shadow-xl cursor-pointer">
+
+        <div class="mb-6 flex justify-center">
+          <div class="icon border-2 border-emerald-500 text-emerald-500 rounded-full w-20 h-20 flex items-center justify-center text-4xl transition-all">
+            <i class="fas fa-bullseye"></i>
+          </div>
+        </div>
+
+        <h3 class="title text-2xl font-semibold text-gray-800 mb-3 transition-all">Learner</h3>
+        <p class="desc text-gray-600 transition-all">
+          Upgrade your skillset with latest technologies and expert guidance.
+        </p>
+
+      </div>
+
+
+      <!-- Card 3 -->
+      <div class="card card-3 p-10 bg-white rounded-xl shadow-xl cursor-pointer">
+
+        <div class="mb-6 flex justify-center">
+          <div class="icon border-2 border-yellow-500 text-yellow-500 rounded-full w-20 h-20 flex items-center justify-center text-4xl transition-all">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+        </div>
+
+        <h3 class="title text-2xl font-semibold text-gray-800 mb-3 transition-all">Learning System</h3>
+        <p class="desc text-gray-600 transition-all">
+          Become future-ready with structured, domain-focused learning modules.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 
 
 <?php

@@ -34,10 +34,10 @@
 
         <!-- Middle: nav links (desktop) -->
         <nav class="hidden md:flex md:items-center md:space-x-8">
-          <a href="#" class="text-lg   text-green-600 hover:text-gray-900 px-2 py-1">Home</a>
-          <a href="#" class="text-lg  text-gray-600 hover:text-gray-900 px-2 py-1">About</a>
+          <a href="./index.php" class="text-lg   text-green-600 hover:text-gray-900 px-2 py-1">Home</a>
+          <a href="./about.php" class="text-lg  text-gray-600 hover:text-gray-900 px-2 py-1">About</a>
           <a href="#" class="text-lg  text-gray-600 hover:text-gray-900 px-2 py-1">Courses</a>
-          <a href="#" class="text-lg  text-gray-600 hover:text-gray-900 px-2 py-1">Contact</a>
+          <a href="./contact.php" class="text-lg  text-gray-600 hover:text-gray-900 px-2 py-1">Contact</a>
         </nav>
 
         <!-- Right: Join Now button (desktop) & hamburger (mobile) -->

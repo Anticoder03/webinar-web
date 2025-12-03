@@ -38,6 +38,66 @@
 
   <!-- COPYRIGHT -->
   <div class="mt-12 border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
-    &copy; 2025 Institute Name. All rights reserved.
+    &copy; 2025 Anticoder03. All rights reserved to <a href="https://github.com/Anticoder03">Anticoder03</a>.
   </div>
 </footer>
+
+
+<style>
+/* floating button container */
+.whatsapp-float {
+  position: fixed;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+/* button style */
+.whatsapp-btn {
+  background-color: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  animation: pulse 1.8s infinite;
+}
+
+/* hover effect */
+.whatsapp-btn:hover {
+  transform: scale(1.15) translateY(-50%);
+  background-color: #1ebe5d;
+  box-shadow: 0 12px 25px rgba(37,211,102,0.45);
+}
+
+/* pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style>
+
+
+<!-- Floating WhatsApp Icon -->
+<a href="https://wa.me/919999999999" target="_blank" class="whatsapp-float">
+  <div class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+  </div>
+</a>
+
+<!-- Font Awesome (only if not already included) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
