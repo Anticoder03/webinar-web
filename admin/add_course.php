@@ -1,5 +1,6 @@
 <?php
 // Include DB connection
+include_once './_Nav.php';
 include "../config/db.php";
 
 // Handle Form Submit
@@ -120,3 +121,4 @@ if (isset($_POST['submit'])) {
 
 </body>
 </html>
+<?php include_once './_Footer.php'; ?>

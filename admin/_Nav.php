@@ -3,8 +3,7 @@ if(!isset($_SESSION)) {
     session_start();
 }
 ?>
-  <script src="https://cdn.tailwindcss.com"></script>
-
+<script src="https://cdn.tailwindcss.com"></script>
 
 <!-- Tailwind Navbar -->
 <nav class="bg-gray-900 text-white px-6 py-4 shadow-lg">
@@ -12,10 +11,17 @@ if(!isset($_SESSION)) {
 
         <!-- Left Links -->
         <div class="flex items-center space-x-6">
+
             <a href="index.php" class="hover:text-blue-400 transition">Dashboard</a>
-            <a href="#" class="hover:text-blue-400 transition">Products</a>
-            <a href="#" class="hover:text-blue-400 transition">Users</a>
-            <a href="#" class="hover:text-blue-400 transition">Settings</a>
+
+            <!-- Course Section -->
+            <a href="see_courses.php" class="hover:text-blue-400 transition">See Courses</a>
+            <a href="add_course.php" class="hover:text-blue-400 transition">Add Course</a>
+
+            <!-- Event Section -->
+            <a href="see_events.php" class="hover:text-blue-400 transition">See Events</a>
+            <a href="add_event.php" class="hover:text-blue-400 transition">Add Event</a>
+
         </div>
 
         <!-- Right User Info -->
