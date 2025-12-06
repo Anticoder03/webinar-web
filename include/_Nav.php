@@ -39,6 +39,7 @@
           <a href="./about.php" class="text-lg text-gray-600 hover:text-gray-900 px-2 py-1">About</a>
           <a href="./course.php" class="text-lg text-gray-600 hover:text-gray-900 px-2 py-1">Courses</a>
           <a href="./contact.php" class="text-lg text-gray-600 hover:text-gray-900 px-2 py-1">Contact</a>
+          <a href="./event.php" class="w-full text-center py-2 rounded-md text-gray-700 hover:bg-gray-50">Upcoming Event</a>
         </nav>
 
         <!-- Right items -->
@@ -77,6 +78,7 @@
           <a href="./about.php" class="w-full text-center py-2 rounded-md text-gray-700 hover:bg-gray-50">About</a>
           <a href="./course.php" class="w-full text-center py-2 rounded-md text-gray-700 hover:bg-gray-50">Courses</a>
           <a href="./contact.php" class="w-full text-center py-2 rounded-md text-gray-700 hover:bg-gray-50">Contact</a>
+          <a href="./event.php" class="w-full text-center py-2 rounded-md text-gray-700 hover:bg-gray-50">Upcoming Event</a>
         </div>
 
         <div class="pt-2 border-t">
