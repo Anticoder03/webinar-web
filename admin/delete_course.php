@@ -5,31 +5,32 @@ if (!isset($_SESSION['admin_logged_in'])) {
     exit;
 }
 
-include "config/db.php";
+include "../config/db.php";
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // Delete event images first
-    $q = $conn->query("SELECT event_banner, speaker_image FROM events WHERE event_id = $id");
+    // Get current images
+    $q = $conn->query("SELECT banner_image, institute_image FROM courses WHERE course_id = $id");
     $img = $q->fetch_assoc();
 
+    // Delete files
     if ($img) {
-        if (!empty($img['event_banner']) && file_exists($img['event_banner'])) {
-            unlink($img['event_banner']);
+        if (!empty($img['banner_image']) && file_exists($img['banner_image'])) {
+            unlink($img['banner_image']);
         }
-        if (!empty($img['speaker_image']) && file_exists($img['speaker_image'])) {
-            unlink($img['speaker_image']);
+        if (!empty($img['institute_image']) && file_exists($img['institute_image'])) {
+            unlink($img['institute_image']);
         }
     }
 
-    // Delete event record
-    $sql = "DELETE FROM events WHERE event_id = $id";
+    // Delete row
+    $sql = "DELETE FROM courses WHERE course_id = $id";
 
     if ($conn->query($sql)) {
-        header("Location: see_.php?msg=deleted");
+        header("Location: see_courses.php?msg=deleted");
     } else {
-        header("Location: see_events.php?msg=error");
+        header("Location: see_courses.php?msg=error");
     }
 }
 ?>

@@ -1,7 +1,6 @@
 <?php
 include_once '../config/db.php';
-include_once '../include/_Header.php';
-include_once '../include/_Nav.php';
+include_once './_Nav.php';
 
 // Handle form submission
 if (isset($_POST['submit'])) {
