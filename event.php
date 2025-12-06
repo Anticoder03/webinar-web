@@ -20,7 +20,6 @@ include_once 'config/db.php';
     </p>
   </div>
 </section>
-
 <!-- Events Section -->
 <section class="py-16 bg-gray-50">
   <div class="max-w-7xl mx-auto px-6">
@@ -31,110 +30,75 @@ include_once 'config/db.php';
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-      <!-- Event Card -->
+      <?php
+      $sql = "SELECT * FROM events ORDER BY event_date ASC";
+      $res = $conn->query($sql);
+
+      if ($res->num_rows > 0) {
+        while ($row = $res->fetch_assoc()) {
+
+          // Convert date to readable format (e.g. 14 Mar 2025)
+          $formattedDate = date("d M Y", strtotime($row['event_date']));
+      ?>
+
+      <!-- Dynamic Event Card -->
       <div class="bg-white rounded-xl shadow hover:shadow-2xl transition-all duration-300 overflow-hidden">
         <div class="relative">
+          
+          <!-- Event Banner Image -->
           <img 
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80"
+            src="./admin/<?php echo $row['event_banner']; ?>" 
             class="w-full h-56 object-cover"
+            alt="Event Banner"
           />
+
+          <!-- Date Badge -->
           <span class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 text-sm font-semibold rounded">
-            14 Mar 2025
+            <?php echo $formattedDate; ?>
           </span>
         </div>
 
         <div class="p-6">
+          
+          <!-- Event Title -->
           <h3 class="text-xl font-semibold mb-2 hover:text-emerald-600 cursor-pointer">
-            Workshop: Breaking Into Clinical Research
+            <?php echo $row['title']; ?>
           </h3>
 
+          <!-- Event Description -->
           <p class="text-gray-600 mb-4">
-            Learn how to start a career in Clinical Research & understand the real industry requirements.
+            <?php echo $row['description']; ?>
           </p>
 
+          <!-- Speaker Info -->
           <div class="flex items-center gap-3">
-            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=80&q=80"
-                 class="w-10 h-10 rounded-full" />
-            <p class="text-gray-700 text-sm">Speaker: Dr. Maya Sharma</p>
+            <img 
+              src="./admin/<?php echo $row['speaker_image']; ?>" 
+              class="w-10 h-10 rounded-full object-cover"
+              alt="Speaker Image"
+            />
+            <p class="text-gray-700 text-sm">Speaker: <?php echo $row['speaker_name']; ?></p>
           </div>
 
           <div class="mt-4">
-            <a href="#" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-semibold">
+            <a 
+              href="<?php echo $row['g_form']; ?>" 
+              target="_blank"
+              class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-semibold"
+            >
               Register Now
             </a>
           </div>
+
         </div>
       </div>
 
-      <!-- Event Card -->
-      <div class="bg-white rounded-xl shadow hover:shadow-2xl transition-all duration-300 overflow-hidden">
-        <div class="relative">
-          <img 
-            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80"
-            class="w-full h-56 object-cover"
-          />
-          <span class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 text-sm font-semibold rounded">
-            20 Mar 2025
-          </span>
-        </div>
-
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2 hover:text-emerald-600 cursor-pointer">
-            Live Webinar: Introduction to Pharmacovigilance
-          </h3>
-
-          <p class="text-gray-600 mb-4">
-            A beginner-friendly webinar explaining core concepts, career paths & certifications.
-          </p>
-
-          <div class="flex items-center gap-3">
-            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=80&q=80"
-                 class="w-10 h-10 rounded-full" />
-            <p class="text-gray-700 text-sm">Speaker: Rahul Patil</p>
-          </div>
-
-          <div class="mt-4">
-            <a href="#" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-semibold">
-              Register Now
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Event Card -->
-      <div class="bg-white rounded-xl shadow hover:shadow-2xl transition-all duration-300 overflow-hidden">
-        <div class="relative">
-          <img 
-            src="https://images.unsplash.com/photo-1560439514-4e9645039924?auto=format&fit=crop&w=800&q=80"
-            class="w-full h-56 object-cover"
-          />
-          <span class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 text-sm font-semibold rounded">
-            27 Mar 2025
-          </span>
-        </div>
-
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2 hover:text-emerald-600 cursor-pointer">
-            Hands-On Session: Clinical Data Management Tools
-          </h3>
-
-          <p class="text-gray-600 mb-4">
-            Learn SAS, Oracle RDC, and Medidata basics with hands-on demonstrations.
-          </p>
-
-          <div class="flex items-center gap-3">
-            <img src="https://images.unsplash.com/photo-1603415526960-f7e0328e110c?auto=format&fit=crop&w=80&q=80"
-                 class="w-10 h-10 rounded-full" />
-            <p class="text-gray-700 text-sm">Speaker: Priya Nair</p>
-          </div>
-
-          <div class="mt-4">
-            <a href="#" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-semibold">
-              Register Now
-            </a>
-          </div>
-        </div>
-      </div>
+      <?php
+        }
+      } else {
+        echo "<p class='text-center text-gray-600 col-span-3'>No upcoming events available.</p>";
+      }
+      ?>
 
     </div>
 
